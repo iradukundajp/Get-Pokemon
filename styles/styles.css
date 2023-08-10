@@ -9,7 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: url('../assets/fortntite-pokemon.gif') fixed center;
-    background-size: cover;
+    background-size: 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +78,7 @@ button:hover {
     font-size: 34px;
     margin-bottom: 10px;
     color: #4caf50;
+    text-align: center;
 }
 
 .pokemon-container img {
@@ -89,6 +90,7 @@ button:hover {
 .pokemon-container h3 {
     margin: 10px 0;
     color: hsl(122, 30%, 54%);
+    text-align: center;
 }
 
 .pokemon-container ul {
@@ -99,6 +101,7 @@ button:hover {
 .pokemon-container li {
     font-size: 30px;
     color: #245f25;
+    font-weight: bold;
 }
 
 .pokemon-container:hover {
