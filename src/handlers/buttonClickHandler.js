@@ -12,10 +12,19 @@ const handleButtonClick = async (pokemonId) => {
 
     const pokemonContainer = createPokemonContainer(name, image, typeNames);
 
-    dom.root.innerHTML = '';
-    dom.root.appendChild(pokemonContainer);
+    // Find the existing pokemon-container div
+    const existingPokemonContainer = document.querySelector('.pokemon-container');
+
+    if (existingPokemonContainer) {
+      // Replace the content of the existing pokemon container div
+      existingPokemonContainer.innerHTML = '';
+      existingPokemonContainer.appendChild(pokemonContainer);
+    } else {
+      // If no existing container, append the new container to the root div
+      dom.root.appendChild(pokemonContainer);
+    }
   } catch (error) {
-    console.error('Error fetching Pokémon data:', error);
+    console.error('Error fetching Pokemon data:', error);
   }
 };
 
